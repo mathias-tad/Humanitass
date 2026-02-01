@@ -1,0 +1,36 @@
+# Humanitas Python API - AI and Calculation Service
+# Python 3.10+
+
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.0
+
+# Database
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+
+# AI/ML Libraries
+scikit-learn==1.4.0
+spacy==3.7.2
+# Download language model: python -m spacy download en_core_web_sm
+
+# PDF Processing
+PyPDF2==3.0.1
+python-docx==1.1.0
+
+# NLP and Text Processing
+nltk==3.8.1
+regex==2023.12.25
+
+# API and Web
+requests==2.31.0
+python-multipart==0.0.6
+
+# Utilities
+python-dotenv==1.0.0
+pydantic-settings==2.1.0
+
+# Development
+pytest==7.4.4
+black==24.1.1
+flake8==7.0.0
