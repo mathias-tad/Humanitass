@@ -667,7 +667,7 @@ async getUserWithCache(userId: string) {
 }
 ```
 
-### Load Testing Results
+### Load Testing Expected Results
 
 | Metric | Value |
 |--------|-------|

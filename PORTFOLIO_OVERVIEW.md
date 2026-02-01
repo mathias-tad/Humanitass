@@ -30,7 +30,6 @@ Humanitas-Portfolio/
 5. **Database Service**: Multi-tenant connection pooling
 6. **Middleware**: Tenant resolution, logging, rate limiting
 7. **Interceptors**: Response transformation, caching
-8. **AI Integration**: CV screening with ML
 
 ### Frontend Code Samples (8+ files)
 1. **Dashboard**: Main metrics view
@@ -92,6 +91,6 @@ This is a curated portfolio showcasing selected code samples. The complete produ
 
 ---
 
-**Author**: Mathias Tadesse  
+**Author**: Mathias Bekele  
 **Role**: Full-Stack Developer & Solution Architect  
-**LinkedIn**: [Add your profile link]
+**LinkedIn**: [www.linkedin.com/in/mathias-tadesse-96336131a]

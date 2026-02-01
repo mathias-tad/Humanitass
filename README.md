@@ -1,4 +1,4 @@
-# Humanitas - Enterprise Resource Planning (ERP) Platform
+# Humanitas - Future Enterprise Resource Planning (ERP), HR management Platform
 
 [![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)](https://nestjs.com/)
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
@@ -8,8 +8,8 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 
 > **A production-ready, multi-tenant SaaS ERP platform** for comprehensive enterprise resource management.  
-> Currently featuring: HR Management, Payroll Processing, Attendance Tracking, and Performance Management.  
-> **Future Vision**: Complete ERP suite including Inventory, Procurement, Finance, CRM, and Project Management.
+> Currently featuring: HR Management, Payroll Processing, Attendance Tracking, and Project Management.  
+> **Future Vision**: Complete ERP suite including Inventory, Procurement, Finance, CRM, and Others.
 
 [🏗️ Architecture](#architecture) | [✨ Features](#features) | [🚀 Tech Stack](#tech-stack) | [📖 Documentation](#documentation)
 
@@ -24,7 +24,7 @@
 - ✅ **Human Resources (HR)** - Employee management, organizational structure, categories
 - ✅ **Payroll Processing** - Advanced payroll engine with complex calculations
 - ✅ **Attendance Management** - Time tracking, biometric integration, shift scheduling
-- ✅ **Performance Management System (PMS)** - Goal tracking, KPIs, reviews
+- ✅ **Project Management System (PMS)** - Goal tracking, KPIs, reviews
 - ✅ **Leave Management** - Leave requests, approvals, balance tracking
 - ✅ **Overtime Tracking** - Advanced overtime calculation with holiday/weekend rates
 - ✅ **Scheduling** - Shift patterns, rotations, and workforce planning
@@ -185,7 +185,7 @@ graph TB
 - **Real-time Presence**: WebSocket-powered live updates
 - **Overtime Management**: Holiday/Weekend/Night shift rates
 
-### 📈 Performance Management (PMS)
+### 📈 Task Based Project and Performance Management (PMS)
 
 - **Goal Setting**: Cascading objectives (OKRs)
 - **KPI Tracking**: Quantitative and qualitative metrics
@@ -237,7 +237,7 @@ graph TB
 | **Docker** | Containerization |
 | **Docker Compose** | Multi-container orchestration |
 | **Nginx** | Reverse proxy and load balancer |
-| **PM2** | Process management (production) |
+| **PM2** | Process management (to be used for production) |
 | **Git** | Version control |
 | **GitHub Actions** | CI/CD pipelines (planned) |
 
@@ -297,17 +297,37 @@ services:
 
 ```typescript
 // Progressive Tax Calculation
-calculateIncomeTax(fullBasicSalary: number, taxableIncome: number) {
-  const applicableRule = taxRules.find(rule => 
-    fullBasicSalary >= rule.min_salary && 
-    fullBasicSalary <= rule.max_salary
-  );
-  
-  const rate = applicableRule.tax_rate / 100;
-  const deductible = applicableRule.deductible;
-  
-  return Math.max(0, taxableIncome * rate - deductible);
-}
+
+```python
+# Progressive Tax Calculation (Python/FastAPI)
+def calculate_income_tax(full_basic_salary: float, taxable_income: float, tax_rules: list) -> float:
+    """
+    Calculate income tax based on progressive tax rules.
+    
+    Args:
+        full_basic_salary: The employee's full basic salary
+        taxable_income: The taxable income amount
+        tax_rules: List of tax rule dictionaries with min_salary, max_salary, tax_rate, and deductible
+        
+    Returns:
+        The calculated income tax amount (minimum 0)
+    """
+    # Find the applicable tax rule based on salary
+    applicable_rule = next(
+        (rule for rule in tax_rules 
+         if rule['min_salary'] <= full_basic_salary <= rule['max_salary']),
+        None
+    )
+    
+    if applicable_rule is None:
+        return 0.0
+    
+    # Calculate tax rate and deductible
+    rate = applicable_rule['tax_rate'] / 100
+    deductible = applicable_rule['deductible']
+    
+    # Calculate and return tax (minimum 0)
+    return max(0, taxable_income * rate - deductible)
 ```
 
 **Capabilities:**
@@ -390,19 +410,11 @@ class CVAnalyzer:
 ## 📖 Documentation
 
 ### Project
-- **[Architecture Overview](./ARCHITECTURE.md)** - System design and patterns
+- **[Architecture Overview](./docs/ARCHITECTURE.md)** - System design and patterns
 - **[Folder Structure](./FOLDER_STRUCTURE.md)** - Complete directory organization for all services ⭐
 - **[Code Samples](./backend/CODE_SAMPLES.md)** - 22 production-quality code examples
 - **[Getting Started](./GETTING_STARTED.md)** - Setup and development guide
-- **[API Documentation](./API_DOCS.md)** - RESTful API reference
-- **[Roadmap](./ROADMAP.md)** - Future features and timeline
-
-### Key Concepts
-
-- **Multi-Tenancy**: [How tenant isolation works](./docs/multi-tenancy.md)
-- **Payroll Engine**: [Calculation logic explained](./docs/payroll-engine.md)
-- **Performance**: [Optimization strategies](./docs/performance.md)
-- **Security**: [Security best practices](./docs/security.md)
+- **[Roadmap](./docs/ROADMAP.md)** - Future features and timeline
 
 ---
 
@@ -419,8 +431,8 @@ class CVAnalyzer:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/humanitas-portfolio.git
-cd humanitas-portfolio
+git clone https://github.com/mathias-tad/humanitass.git
+cd humanitass
 
 # Copy environment template
 cp .env.example .env
@@ -537,7 +549,7 @@ Password: 12345678
 | **Lines of Code** | 25,000+ (estimated) |
 | **Tech Stack** | TypeScript, Python, PostgreSQL |
 | **Architecture** | Multi-tenant microservices |
-| **Max Users Tested** | 200,000+ employees |
+| **Design for Max Users** | 200,000+ employees |
 
 ---
 
@@ -696,9 +708,9 @@ This project is a portfolio demonstration and is provided for educational purpos
 - Production deployment & DevOps
 
 **Connect:**
-- 💼 LinkedIn: [Your LinkedIn]
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-- 📧 Email: your.email@example.com
+- 💼 LinkedIn: [www.linkedin.com/in/mathias-tadesse-96336131a]
+- 🐙 GitHub: [@mathias-tad](https://github.com/mathias-tad)
+- 📧 Email: [mathiasstadesse@gmail.com]
 
 ---
 
@@ -715,6 +727,6 @@ This project is a portfolio demonstration and is provided for educational purpos
 
 **⭐ Star this repository if you find it helpful!**
 
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yourusername.humanitas-portfolio)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=mathias-tad.humanitass)
 
 </div>

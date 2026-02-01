@@ -22,16 +22,8 @@ This guide will help you understand the Humanitas architecture and run the platf
 
 ---
 
-## 🚀 Quick Start (Docker Compose)
-
-### 1. Clone the Repository
-
-```bash
- https://github.com/yourusername/humanitas-erp-portfolio.git
-cd humanitas-erp-portfolio
-```
-
-### 2. Configure Environment
+ https://github.com/mathias-tad/humanitass.git
+cd humanitass
 
 ```bash
 # Copy environment template
@@ -73,7 +65,7 @@ docker-compose -f infrastructure/docker-compose.yml ps
 
 ```bash
 # Create master database
-createdb humanitas_db
+createdb humanitas
 
 # The application will create tenant databases automatically
 ```
@@ -225,7 +217,7 @@ This will:
 ```typescript
 // 1. User logs in
 POST /api/v1/auth/login
-{ email: "user@example.com", password: "secret" }
+{ organization_id: "test", email: "user@example.com", password: "secret" }
 
 // 2. Server validates and returns JWT
 {
@@ -424,7 +416,6 @@ docker-compose logs admin-api
 2. **Read Documentation**:
    - [Architecture Guide](./docs/ARCHITECTURE.md)
    - [ERP Roadmap](./docs/ROADMAP.md)
-   - [API Documentation](./docs/API.md) (if available)
 
 3. **Try Features**:
    - Create a tenant
@@ -442,15 +433,9 @@ docker-compose logs admin-api
 ## 💬 Support
 
 For questions or issues with this portfolio project:
-- 📧 Email: your.email@example.com
-- 💼 LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-
----
-
-## 📄 License
-
-This is a portfolio demonstration project. See [LICENSE](./LICENSE) for details.
+- 📧 Email: ymathiasstadesse@gmail.com
+- 💼 LinkedIn: [https://linkedin.com/in/mathias-tadesse-96336131a](https://linkedin.com/in/mathias-tadesse-96336131a)
+- 🐙 GitHub: [@Mathias-tad](https://github.com/Mathias-tad)
 
 ---
 

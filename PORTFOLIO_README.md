@@ -68,11 +68,8 @@ This repository contains curated code samples and documentation from the Humanit
 - **[README.md](./README.md)** - Full project overview with live demo
 - **[PORTFOLIO_OVERVIEW.md](./PORTFOLIO_OVERVIEW.md)** - Quick reference
 
-## 🚀 Quick Start
-
-```bash
 # Clone repository
-git clone https://github.com/yourusername/Humanitas-Portfolio.git
+git clone https://github.com/mathias-tad/humanitass.git
 
 # Backend (Tenant API)
 cd backend/tenant-api
@@ -94,7 +91,7 @@ uvicorn main:app --reload
 
 | Layer | Technologies |
 |-------|-------------|
-| **Backend** | NestJS, TypeORM, PostgreSQL, JWT, bcrypt |
+| **Backend** | NestJS, TypeORM, PostgreSQL, JWT, bcrypt, FastAPI |
 | **Frontend** | React, TypeScript, Vite, TailwindCSS, Axios |
 | **AI/ML** | Python, FastAPI, spaCy, scikit-learn, PyPDF2 |
 | **Infrastructure** | Docker, Nginx, PM2 |
@@ -132,12 +129,12 @@ uvicorn main:app --reload
 
 ## 🔗 Live Demo
 
-**URL**: [https://humanitas-demo.example.com](https://humanitas-demo.example.com)
+**URL**: [http://65.2.31.144/login](http://65.2.31.144/login)
 
 **Test Credentials**:
-- Organization: `demo-org`
-- Email: `admin@demo.com`
-- Password: `Demo@1234`
+- Organization: `test`
+- Email: `mathiasstadesse@gmail.com`
+- Password: `12345678`
 
 ## 📝 License
 
@@ -145,10 +142,10 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-**Mathias Tadesse**
+**Mathias Bekele**
 - Full-Stack Developer & Solution Architect
-- LinkedIn: [Your Profile]
-- Email: your.email@example.com
+- LinkedIn: [www.linkedin.com/in/mathias-tadesse-96336131a]
+- Email: mathiasstadesse@gmail.com
 
 ---
 

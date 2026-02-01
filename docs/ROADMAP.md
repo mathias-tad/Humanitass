@@ -4,12 +4,6 @@ This document outlines the vision for transforming Humanitas from an HR/Payroll 
 
 ---
 
-## Vision Statement
-
-> **"To become the leading multi-tenant ERP platform that empowers organizations of all sizes to manage their entire business operations through a unified, intelligent, and scalable system."**
-
----
-
 ## Current State (v1.0 - Q4 2025)
 
 ### ✅ Implemented Modules
@@ -128,7 +122,7 @@ export class Invoice {
 - Support for 10+ currencies
 - Generate 1,000+ invoices per tenant per month
 - Automated payment reconciliation with 95% accuracy
-- Financial reports generated in <2 seconds
+- Financial reports generated in <20 seconds
 
 ---
 
@@ -203,12 +197,9 @@ erDiagram
     }
     
     PRODUCTS ||--o{ STOCK : stored_in
-    WAREHOUSES ||--o{ STOCK : contains
-    PURCHASE_ORDERS ||--o{ PO_LINE_ITEMS : has
-```
-
+    
 ### Success Metrics
-- Track 100,000+ SKUs per tenant
+- Track 100,000+ Stock Keeping Units (SKUs) per tenant
 - Real-time stock updates across 50+ warehouses
 - 98% inventory accuracy
 - Automated reordering saving 20+ hours/month

@@ -224,7 +224,7 @@ backend/admin-api/
 
 ## 3️⃣ Python API (FastAPI - Port 8000)
 
-**Purpose**: AI-powered services and complex calculations
+**Purpose**: AI-powered future services and complex calculations
 
 ```
 backend/python-api/
@@ -295,10 +295,6 @@ backend/workers/
 │   │
 │   ├── jobs/                             # Cron Jobs
 │   │   ├── attendance.jobs.ts
-│   │   ├── payroll.jobs.ts
-│   │   ├── reports.jobs.ts
-│   │   ├── cleanup.jobs.ts
-│   │   └── notifications.jobs.ts
 │   │
 │   ├── queues/                           # Bull Queue Jobs
 │   │   ├── email.queue.ts
