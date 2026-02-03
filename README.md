@@ -462,7 +462,7 @@ See [GETTING_STARTED.md](./GETTING_STARTED.md) for detailed setup instructions.
 
 ### 🚀 Access the Platform
 
-**URL**: [http://65.2.31.144/login](http://65.2.31.144/login)
+**URL**: [http://ec2-15-206-67-43.ap-south-1.compute.amazonaws.com/login](http://ec2-15-206-67-43.ap-south-1.compute.amazonaws.com/login)
 
 **Test Credentials:**
 ```
